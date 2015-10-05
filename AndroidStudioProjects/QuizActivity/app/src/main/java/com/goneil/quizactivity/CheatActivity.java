@@ -2,10 +2,13 @@ package com.goneil.quizactivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by goneil on 9/9/15.
@@ -65,5 +68,8 @@ public class CheatActivity extends Activity{
                 setAnswerShownResult(true);
             }
         });
+
+        TextView versionView = (TextView)findViewById(R.id.version_text_view);
+        versionView.setText("API level " + Build.VERSION.SDK_INT);
     }
 }
